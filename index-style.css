@@ -1,0 +1,104 @@
+/* Общие стили для body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для wrapper (общий для регистрации и входа) */
+.wrapper-reg, .wrapper-login {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Заголовок */
+.wrapper-reg h1, .wrapper-login h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Стили для input-box */
+.wrapper-reg .input-box, .wrapper-login .input-box {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.wrapper-reg .input-box input, .wrapper-login .input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.wrapper-reg .input-box input:focus, .wrapper-login .input-box input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Иконки внутри input-box */
+.wrapper-reg .input-box i, .wrapper-login .input-box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Стили для remember-password */
+.wrapper-reg .remember-password, .wrapper-login .remember-password {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.wrapper-reg .remember-password label, .wrapper-login .remember-password label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Стили для кнопки */
+.wrapper-reg .btn, .wrapper-login .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wrapper-reg .btn:hover, .wrapper-login .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для ссылки регистрации */
+.wrapper-reg .register-link, .wrapper-login .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.wrapper-reg .register-link a, .wrapper-login .register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.wrapper-reg .register-link a:hover, .wrapper-login .register-link a:hover {
+    text-decoration: underline;
+}

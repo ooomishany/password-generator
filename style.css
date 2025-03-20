@@ -1,0 +1,66 @@
+/* Общие стили для body, чтобы центрировать wrapper */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    min-height: 100vh; /* Высота body равна высоте экрана */
+    background-color: #f0f2f5; /* Светлый фон */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+
+/* Стили для wrapper */
+.wrapper {
+    background-color: #ffffff; /* Белый фон */
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    width: 100%; /* Ширина по умолчанию */
+    max-width: 400px; /* Максимальная ширина */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Заголовок */
+.wrapper h2 {
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 24px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+
+/* Стили для input-box */
+.wrapper .input-box {
+    margin-bottom: 20px; /* Отступ между полями */
+    text-align: left; /* Выравнивание текста слева */
+}
+
+.wrapper .input-box input {
+    width: 100%; /* Ширина поля */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+.wrapper .input-box input:focus {
+    border-color: #007bff; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px teal; /* Тень при фокусе */
+}
+
+/* Стили для кнопки */
+.wrapper button {
+    width: 100%; /* Ширина кнопки */
+    padding: 10px; /* Внутренние отступы */
+    background-color: teal; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.wrapper button:hover {
+    background-color: teal; /* Цвет фона при наведении */
+}
