@@ -44,7 +44,7 @@ body {
 }
 
 .wrapper .input-box input:focus {
-    border-color: #007bff; /* Цвет границы при фокусе */
+    border-color: teal; /* Цвет границы при фокусе */
     box-shadow: 0 0 5px teal; /* Тень при фокусе */
 }
 
