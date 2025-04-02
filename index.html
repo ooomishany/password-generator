@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="index-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 
 </head>
@@ -14,10 +16,10 @@
 
 <header style="background-color: teal; width: 100%; height: 80px;">
 
-    <a href="registration.html">
+    <a style="text-decoration: none;" href="registration/registration.html">
         <button class="common-button">Регистрация</button>
     </a>
-    <a href="login.html">
+    <a style="text-decoration: none;" href="registration/login.html">
         <button class="common-button">Вход</button>
     </a>
     <button class="common-button">Ru</button>
@@ -27,8 +29,47 @@
 <div style="text-align: center;">
     <h1>Сгенирируй свой надежный пароль!</h1>
     <div><img src="password.jpeg" alt="Картинка" class="image-style"></div>
-    <output>вывод пароля</output>
+    <div class="pwd-generator-password">
+        <span class="output-panel">
+            <pre>output</pre>
+            <button class="copy-btn" style="width: 30px; height: 30px;"><i class='bx bx-revision'></i></button>
+            <button class="copy-btn"><title>copy</title>Копировать</button>
+        </span>
+    </div>
+    <div class="pass-setting" style="font-size: 20px;">
+        Длина пароля 
+        <input type="number" class="pass-len">
+        <input type="range" class="pass-line" min="4" max="64" step="1.0">
+    </div>
 </div>
 </body>
+
+<footer class="footer">
+    <h1>Безопасность ваших данных</h1>
+    <div class="links">
+        
+        
+        <div class="image-container">
+            <img src="pass_link1.jpg" alt="картинка 1">
+            <a href="https://eset.ua/ru/news/view/793/vsemirnyy-den-paroley-5-rasprostranennykh-oshibok-pri-sozdanii-kombinatsii-dlya-vkhoda" target="_blank">5 распространенных ошибок при создании комбинации для входа</a>
+        </div>
+    
+        <div class="image-container">
+            <img src="pass_link2.jpg" alt="картинка 2">
+            <a href="https://eset.ua/ru/news/view/827/opasnyy-bankovskiy-troyan-mekotio-pokhishchayet-bitkoiny-i-uchetnyye-dannyye-iz-google-chrome" target="_blank">Опасный банковский троян Mekotio похищает биткоины и учетные данные с Google Chrome</a>
+        </div>
+    
+        <div class="image-container">
+            <img src="pass_link3.jpg" alt="картинка 3">
+            <a href="https://eset.ua/ru/news/view/649/nadezhnyy-parol-sposoby-sozdaniya-parolya-ot-spetsialistov-eset" target="_blank">Как создать надежный пароль — рекомендации специалистов ESET</a>
+        </div>
+    </div>
+    
+    <div class="footer-contacts">
+        <a href="tel:+71234567890" class="footer-link">+7 (123) 456-78-90</a>
+        <span class="separator">|</span>
+        <a href="mailto:info@example.com" class="footer-link">info@example.com</a>
+    </div>
+</footer>
 </html>
 
