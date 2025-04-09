@@ -1,66 +1,113 @@
-/* Общие стили для body, чтобы центрировать wrapper */
+/* Общие стили для body */
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
-    min-height: 100vh; /* Высота body равна высоте экрана */
-    background-color: #f0f2f5; /* Светлый фон */
-    font-family: Arial, sans-serif; /* Шрифт */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
 }
 
 /* Стили для wrapper */
 .wrapper {
-    background-color: #ffffff; /* Белый фон */
-    padding: 30px; /* Внутренние отступы */
-    border-radius: 10px; /* Скругление углов */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
-    width: 100%; /* Ширина по умолчанию */
-    max-width: 400px; /* Максимальная ширина */
-    text-align: center; /* Выравнивание текста по центру */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px; /* Добавляем отступы по краям */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
 /* Заголовок */
 .wrapper h2 {
-    margin-bottom: 20px; /* Отступ снизу */
-    font-size: 24px; /* Размер шрифта */
-    color: #333; /* Цвет текста */
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
 /* Стили для input-box */
 .wrapper .input-box {
-    margin-bottom: 20px; /* Отступ между полями */
-    text-align: left; /* Выравнивание текста слева */
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .wrapper .input-box input {
-    width: 100%; /* Ширина поля */
-    padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 5px; /* Скругление углов */
-    font-size: 16px; /* Размер шрифта */
-    outline: none; /* Убираем обводку при фокусе */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
 }
 
 .wrapper .input-box input:focus {
-    border-color: teal; /* Цвет границы при фокусе */
-    box-shadow: 0 0 5px teal; /* Тень при фокусе */
+    border-color: teal;
+    box-shadow: 0 0 5px teal;
 }
 
 /* Стили для кнопки */
 .wrapper button {
-    width: 100%; /* Ширина кнопки */
-    padding: 10px; /* Внутренние отступы */
-    background-color: teal; /* Цвет фона */
-    color: #fff; /* Цвет текста */
-    border: none; /* Убираем границу */
-    border-radius: 5px; /* Скругление углов */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Курсор при наведении */
-    transition: background-color 0.3s ease; /* Плавный переход */
+    width: 100%;
+    padding: 10px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .wrapper button:hover {
-    background-color: #c3d2f3; /* Цвет фона при наведении */
+    background-color: #c3d2f3;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+    body {
+        align-items: center; /* Выравниваем форму по верху */
+        padding-top: 20px; /* Добавляем отступ сверху */
+    }
+
+    .wrapper {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .wrapper h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .wrapper .input-box {
+        margin-bottom: 15px;
+    }
+
+    .wrapper .input-box input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .wrapper button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 320px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .wrapper h2 {
+        font-size: 18px;
+    }
 }
