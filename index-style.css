@@ -255,3 +255,107 @@
       padding: 10px 15px; /* Внутренние отступы для ссылок */
       margin: 0 10px; /* Внешние отступы между ссылками */
     }
+    /* Медиа-запрос для устройств с шириной экрана до 768px (телефоны) */
+@media (max-width: 768px) {
+  /* Шапка */
+  header {
+      height: 60px;
+      padding: 0 10px;
+      justify-content: space-between; /* Распределяем пространство */
+  }
+  
+  .common-button {
+      width: 80px;
+      height: 35px;
+      font-size: 12px;
+      margin-left: 5px;
+  }
+  
+  /* Основное содержимое */
+  .image-style {
+      height: auto;
+      width: 100%;
+      max-width: 100%;
+  }
+  
+  .output-panel {
+      width: 90%;
+      height: auto;
+      min-height: 50px;
+      padding: 8px;
+      font-size: 12px;
+  }
+  
+  .copy-btn {
+      height: 25px;
+      font-size: 10px;
+      padding: 0 8px;
+  }
+  
+  .pass-setting {
+      width: 90%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+  }
+  
+  .pass-len, .pass-line {
+      width: 100%;
+      margin: 5px 0;
+  }
+  
+  .pass-line {
+      width: calc(100% - 20px);
+      margin: 10px 0;
+  }
+  
+  h1 {
+      font-size: 24px;
+      text-align: center;
+      padding: 0 15px;
+  }
+  
+  /* Футер */
+  .links {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+  
+  footer img {
+      max-width: 150px;
+  }
+  
+  .footer-contacts {
+      height: auto;
+      padding: 15px 10px;
+      flex-direction: column;
+  }
+  
+  .footer-link {
+      padding: 5px;
+      margin: 5px 0;
+      font-size: 14px;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  header {
+      height: 50px;
+  }
+  
+  .common-button {
+      width: 70px;
+      height: 30px;
+      font-size: 11px;
+  }
+  
+  h1 {
+      font-size: 20px;
+  }
+  
+  .output-panel, .pass-setting {
+      width: 95%;
+  }
+}
