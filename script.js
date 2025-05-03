@@ -18,6 +18,7 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
 
     if(message.length == 0){
         showError("message", "Введите сообщение");
+        return;
     }
 
     if(email.length == 0){
