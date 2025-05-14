@@ -4,36 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма обратной связи</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="feedback_style.css">
 </head>
-<body>
-    <div class="form-container">
-        <h2>Обратная связь</h2>
-        <form id="feedbackForm">
-            <div class="form-group">
-                <label for="name">Ваше имя</label>
-                <input type="text" id="name" placeholder="Как к вам обращаться?">
-                <span class="error-message" id="name-error"></span>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="card mx-auto shadow-lg" style="max-width: 600px;">
+            <div class="card-header bg-teal text-white">
+                <h2 class="text-center mb-0"><i class="bi bi-chat-left-text me-2"></i>Обратная связь</h2>
             </div>
-            
-            <div class="form-group">
-                <label for="email">Ваш email</label>
-                <input type="email" id="email" placeholder="example@mail.com">
-                <span class="error-message" id="email-error"></span>
+            <div class="card-body p-4">
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Как к вам обращаться?">
+                        <div class="invalid-feedback" id="name-error"></div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Ваш email</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@mail.com">
+                        <div class="invalid-feedback" id="email-error"></div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Напишите ваше сообщение..."></textarea>
+                        <div class="invalid-feedback" id="message-error"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-teal w-100 py-2">
+                        <i class="bi bi-send-fill me-2"></i>Отправить сообщение
+                    </button>
+                </form>
             </div>
-            
-            <div class="form-group">
-                <label for="message">Сообщение</label>
-                <textarea id="message" placeholder="Напишите ваше сообщение..."></textarea>
-                <span class="error-message" id="message-error"></span>
-            </div>
-            
-            <button type="submit">Отправить сообщение</button>
-        </form>
+        </div>
     </div>
-    
-    <div class="success-message" id="successMessage">Спасибо! Ваше сообщение отправлено</div>
 
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4 text-teal">
+                        <i class="bi bi-check-circle-fill" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="mb-3">Спасибо!</h4>
+                    <p class="mb-0">Ваше сообщение успешно отправлено.</p>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-teal px-4" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
